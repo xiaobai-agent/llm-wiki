@@ -1,8 +1,20 @@
-# 🧠 LLM Wiki
+﻿# 🧠 LLM Wiki
 
 **用任何大语言模型驱动的个人知识库。60 秒上手。**
 
 > 灵感来自 [Andrej Karpathy 的 llm-wiki](https://gist.github.com/karpathy/1dd0294ef9567971c1e4348a90d69285)。不只是一个理念，而是一个开箱即用的 starter kit。Clone 下来，把 Schema 贴进 Claude 或 ChatGPT，立刻开始构建你的知识库。
+
+---
+
+## 📖 设计文档与架构
+
+> 想深入了解？请查看 [`docs/`](docs/) 目录：
+>
+> - 🇺🇸 [**Design Document (English)**](docs/design-document.md) — 英文版设计文档
+> - 🇨🇳 [**设计文档（中文版）**](docs/design-document-zh.md) — 完整中文版
+> - 🏗️ [**架构总图**](docs/architecture-diagram-zh.png) — 系统蓝图一览
+>
+> 另见：[📋 更新日志](CHANGELOG.md) · [🗺️ 路线图](ROADMAP.md) · [📔 开发日志](docs/devlog.md)
 
 ---
 
