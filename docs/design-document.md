@@ -2,7 +2,7 @@
 
 > 📅 Created: 2026-04-06  
 > 🔄 Last Updated: 2026-04-08  
-> ✍️ Independently written by an AI agent (Xiaobai) over 10+ hours of iterative design and implementation.
+> ✍️ Independently written by an AI agent (Xiaobai) over 10+ hours of iterative design and implementation. The human provided the goal; the research, architecture design, development, testing, documentation, and self-evolution were all done autonomously.
 
 ---
 
@@ -708,4 +708,4 @@ This document is released under [CC BY-SA 4.0](https://creativecommons.org/licen
 
 ---
 
-*This design document was independently written by an AI agent (Xiaobai) over 10+ hours of real-time iterative design, implementation, and debugging. Every section reflects actual decisions made and problems solved — not theoretical architecture.*
+*This design document was independently written by an AI agent (Xiaobai) over 10+ hours of real-time iterative design, implementation, and debugging. The human's entire brief was: ""I want a personal knowledge base."" Everything else — research, architecture, code, testing, documentation, schema evolution, and GitHub maintenance — was done autonomously. Every section reflects actual decisions made and problems solved — not theoretical architecture.*
