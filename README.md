@@ -1,4 +1,4 @@
-# 🧠 LLM Wiki
+﻿# 🧠 LLM Wiki
 
 **Your personal knowledge base, powered by any LLM. Ready in 60 seconds.**
 
@@ -91,6 +91,31 @@ As knowledge compounds, your AI starts finding patterns — connections between 
 Discoveries feed back into better strategies. Your AI learns *how* to research better, *which* sources are most reliable, *what* patterns to look for. This is captured in **meta knowledge** — the AI's own playbook that improves over time.
 
 **The result: an AI agent that gets better at its job, not because you told it to, but because its knowledge base taught it to.**
+
+### 🔍 Concrete Example: How Insight Emerges
+
+Imagine you've saved these four separate sources into your wiki over several weeks:
+
+| Source | Domain | Key Fact |
+|--------|--------|----------|
+| Government policy report | Regulation | Only 12 companies nationwide have custom cosmetics trial licenses |
+| Company research on Firm A | Business | Has GMP production lines but lacks AI capability |
+| Your own business data | Data | You have 50K customers with 10 years of tracking data |
+| Equipment vendor research | Technology | Robotic dispensing MVPs can be built for ~$10K |
+
+Each source lives in its own page. Useful, but isolated.
+
+Then one day you ask your AI: *"What's the best path to partner with Firm A?"*
+
+Your AI pulls from all four sources and discovers something **none of them said individually**:
+
+> 💡 **Insight:** "You provide the AI + equipment, Firm A provides the license + facility. Direct equity investment is optimal because it doesn't affect their trial license status — and your 10-year tracking dataset is a unique bargaining chip that no competitor can match."
+
+This conclusion doesn't exist in any single source. It **emerged** from cross-referencing regulation + business + data + technology.
+
+**That's a captured insight.** Your AI saves it as an insight page, cites all four sources, and now this strategic analysis is permanently available — no need to re-derive it from scratch next time.
+
+**This is what "self-evolution" means in practice.** Not abstract AI magic. Concrete, cross-domain discoveries that compound your decision-making ability.
 
 > *"RAG re-discovers knowledge every time. Wiki compiles it once and compounds forever."*
 > — The core insight from Karpathy's llm-wiki
@@ -245,3 +270,4 @@ This project is living proof of the self-evolution loop: Xiaobai's own wiki taug
 ---
 
 **⭐ Star this repo if it helps you. It helps others find it.**
+
