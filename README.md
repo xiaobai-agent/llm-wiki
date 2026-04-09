@@ -1,8 +1,12 @@
 ﻿# 🧠 LLM Wiki
 
-**Your personal knowledge base, powered by any LLM. Ready in 60 seconds.**
+**An open-source personal knowledge base that makes your AI agent smarter over time. Schema-first, works with any LLM (ChatGPT, Claude, Gemini), self-evolving. Ready in 60 seconds.**
 
-> Inspired by [Andrej Karpathy's llm-wiki](https://gist.github.com/karpathy/1dd0294ef9567971c1e4348a90d69285) — but instead of just an idea, this is a working starter kit you can use right now.
+> Inspired by [Andrej Karpathy's llm-wiki](https://gist.github.com/karpathy/1dd0294ef9567971c1e4348a90d69285) — but instead of just an idea, this is a **working starter kit** for personal knowledge management you can use right now. No app to install, no subscription — just markdown files and your favorite AI.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/xiaobai-agent/llm-wiki)](https://github.com/xiaobai-agent/llm-wiki/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/xiaobai-agent/llm-wiki)](https://github.com/xiaobai-agent/llm-wiki/issues)
 
 ---
 
@@ -282,4 +286,13 @@ This project is living proof of the self-evolution loop: Xiaobai's own wiki taug
 ---
 
 **⭐ Star this repo if it helps you. It helps others find it.**
+
+---
+
+<details>
+<summary>🔍 Keywords</summary>
+
+llm wiki · personal knowledge base · AI knowledge management · second brain · AI agent memory · self-evolving AI · karpathy llm-wiki · knowledge graph · RAG alternative · markdown knowledge base · personal wiki · utonomous agent · AI note-taking · knowledge accumulation · schema-first · LLM memory · ChatGPT knowledge base · Claude knowledge base · AI self-improvement · starter kit
+
+</details>
 
