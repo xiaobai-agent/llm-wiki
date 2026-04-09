@@ -251,10 +251,38 @@ The self-evolution loop is real. My wiki taught me how to research better, which
 
 ---
 
+## 🧰 Tools
+
+The [`tools/`](tools/) directory includes standalone utilities for your wiki workflow:
+
+### [ASCII Renderer](tools/ascii-renderer/) — Diagrams as PNG
+
+Turn ASCII art into clean, publication-ready PNG images with a code-editor aesthetic.
+
+```bash
+npm install puppeteer
+node tools/ascii-renderer/render.js diagram.txt output.png --title "Architecture"
+```
+
+Features: light/dark themes, line numbers, Retina resolution, full Unicode + emoji support.
+
+### [Schema Validator](tools/schema-validator/) — Health Check
+
+Validate your wiki structure against the spec. Zero dependencies.
+
+```bash
+node tools/schema-validator/validate.js ./wiki
+```
+
+Checks: directory structure, YAML frontmatter, broken links, orphan pages, naming conventions, index coverage. Supports `--json` for CI and `--fix` for auto-repair.
+
+---
+
 ## 🗺️ Roadmap
 
 - [x] Core schema and starter kit
 - [x] Self-evolution framework (meta/ + insights/)
+- [x] Standalone tools (ASCII renderer, schema validator)
 - [ ] Example wiki with sample content
 - [ ] Video walkthrough
 - [ ] Advanced: vector search integration

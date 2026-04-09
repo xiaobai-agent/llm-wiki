@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 _Next update planned for the week of 2026-04-14._
 
+## [1.1.0] - 2026-04-09
+
+### Added
+- **ASCII Renderer** (`tools/ascii-renderer/`) — render ASCII art diagrams into publication-ready PNG images with light/dark themes, line numbers, Retina resolution, and full Unicode/emoji support
+- **Schema Validator** (`tools/schema-validator/`) — validate wiki structure against WIKI-SCHEMA.md spec, checking directories, frontmatter, cross-references, orphan pages, and naming conventions. Supports `--json` output for CI and `--fix` for auto-repair. Zero dependencies.
+- Tools README with overview of available utilities
+- Test wiki with sample pages for the schema validator
+- Example ASCII art input and rendered output
+
 ## [1.0.2] - 2026-04-09
 
 ### Changed

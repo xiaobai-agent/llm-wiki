@@ -102,6 +102,31 @@ LLM Wiki 是 **复利** —— 每篇新素材都在充实已有页面：
 
 ---
 
+## 🧰 工具集
+
+[`tools/`](tools/) 目录包含独立的实用工具：
+
+### [ASCII 渲染器](tools/ascii-renderer/) — 字符画转 PNG
+
+将 ASCII 字符画（架构图、流程图、时间线）渲染为高清 PNG 图片，代码编辑器风格。
+
+```bash
+npm install puppeteer
+node tools/ascii-renderer/render.js diagram.txt output.png --title "系统架构"
+```
+
+### [Schema 验证器](tools/schema-validator/) — 知识库体检
+
+零依赖，检查目录结构、frontmatter 格式、交叉引用、孤立页面。
+
+```bash
+node tools/schema-validator/validate.js ./wiki
+```
+
+支持 `--json`（CI 集成）和 `--fix`（自动修复）。
+
+---
+
 ## 🛠️ 适配不同 AI
 
 | AI 工具 | 使用方式 |

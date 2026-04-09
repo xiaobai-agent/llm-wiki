@@ -1,0 +1,32 @@
+╔══════════════════════════════════════════════════╗
+║          🧠 LLM Wiki Architecture               ║
+╚══════════════════════════════════════════════════╝
+
+  ┌─────────────────────────────────────────────┐
+  │              📥 RAW SOURCES                 │
+  │  articles/ │ videos/ │ notes/ │ other/      │
+  │  (read-only ground truth, never modified)   │
+  └───────────────────┬─────────────────────────┘
+                      │
+                 ═════▼═══════
+                ║  AI Agent  ║
+                ║  Ingestion ║
+                 ═════════════
+                      │
+  ┌───────────────────▼─────────────────────────┐
+  │              📚 WIKI PAGES                  │
+  │                                             │
+  │  concepts/  │  entities/   │  sources/      │
+  │  insights/  │  comparisons/                 │
+  │                                             │
+  │  (synthesized, cross-referenced, evolving)  │
+  └───────────────────┬─────────────────────────┘
+                      │
+  ┌───────────────────▼─────────────────────────┐
+  │              🔄 META (Strategy Memory)      │
+  │                                             │
+  │  ingest-strategies │ research-patterns      │
+  │  source-quality    │ failure-log            │
+  │                                             │
+  │  (self-improving playbook)                  │
+  └─────────────────────────────────────────────┘
