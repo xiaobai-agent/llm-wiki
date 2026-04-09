@@ -95,9 +95,9 @@ After researching multiple implementations of Karpathy's llm-wiki on GitHub, we 
 
 ### 3.2 Architecture Overview
 
-[Architecture Diagram - see README for visual]
+![Architecture Diagram](architecture-diagram.png)
 
-*Note: The architecture diagram shows the three-layer structure with data flow between Raw Sources, Wiki Pages, and Schema, connected to the chat interface for user interaction.*
+*The architecture diagram shows the three-layer structure with data flow between Raw Sources, Wiki Pages, and Schema, connected to the chat interface for user interaction.*
 
 #### Layer 1: Raw Sources
 
