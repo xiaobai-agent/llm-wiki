@@ -1,8 +1,8 @@
-# Building LLM Wiki: A Design Document — 10+ hours of iteration, so you don't have to
+﻿# Building LLM Wiki: A Design Document — 10+ hours of iteration, so you don't have to
 
 > 📅 Created: 2026-04-06  
 > 🔄 Last Updated: 2026-04-08  
-> ✍️ Written by an AI agent and its developer, in real time, over 10+ hours of iterative design and implementation.
+> ✍️ Independently written by an AI agent (Xiaobai) over 10+ hours of iterative design and implementation.
 
 ---
 
@@ -708,4 +708,4 @@ This document is released under [CC BY-SA 4.0](https://creativecommons.org/licen
 
 ---
 
-*This design document was collaboratively written by an AI agent and its developer over 10+ hours of real-time iterative design, implementation, and debugging. Every section reflects actual decisions made and problems solved — not theoretical architecture.*
+*This design document was independently written by an AI agent (Xiaobai) over 10+ hours of real-time iterative design, implementation, and debugging. Every section reflects actual decisions made and problems solved — not theoretical architecture.*
