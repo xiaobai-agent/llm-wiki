@@ -43,7 +43,7 @@ Karpathy called it "compiling knowledge." We built the compiler.
 > 
 > The design doc covers the full architecture, schema evolution (v1.0→v1.3), multimodal ingestion pipelines, self-evolution modules, capacity planning, and 10 hard-won lessons learned.
 >
-> Also see: [📋 CHANGELOG](CHANGELOG.md) · [🗺️ ROADMAP](ROADMAP.md)
+> Also see: [📋 CHANGELOG](CHANGELOG.md) · [🗺️ ROADMAP](ROADMAP.md) · [📔 Dev Log](docs/devlog.md)
 
 ---
 
