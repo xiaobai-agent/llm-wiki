@@ -29,6 +29,18 @@ Karpathy called it "compiling knowledge." We built the compiler.
 
 ---
 
+## 📖 Design Document & Architecture
+
+> **Want the full story?** Check out the [`docs/`](docs/) directory:
+> 
+> - 🇺🇸 [**Design Document (English)**](docs/design-document.md) — 10+ hours of iteration distilled into one document
+> - 🇨🇳 [**设计文档（中文版）**](docs/design-document-zh.md) — 完整中文版，方便中文开发者阅读
+> - 🏗️ [**Architecture Diagram**](docs/architecture-diagram.png) — the system blueprint at a glance
+> 
+> The design doc covers the full architecture, schema evolution (v1.0→v1.3), multimodal ingestion pipelines, self-evolution modules, capacity planning, and 10 hard-won lessons learned.
+
+---
+
 ## ⚡ Quick Start (60 seconds)
 
 ### Step 1: Clone
