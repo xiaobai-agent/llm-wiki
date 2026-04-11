@@ -9,6 +9,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 _Next update planned for the week of 2026-04-14._
 
+## [1.2.0] - 2026-04-11
+
+### Added
+- **Extensions framework** (`extensions/`) — platform-specific integrations for LLM Wiki
+- **EasyClaw + Feishu extension** (`extensions/easyclaw-feishu/`) — three production-tested skills:
+  - `wiki-video-ingest`: Download video from Feishu chat → ffmpeg extract audio → EasyClaw transcribe → save to wiki/raw/video/
+  - `wiki-web-ingest`: Fetch any URL → trafilatura extract → save to wiki/raw/ (auto-detects source platform)
+  - `wiki-feishu-transfer`: Transfer Feishu chat files to Feishu Drive for archival (supports chunked upload for >20MB)
+- All extension skills include both SKILL.md (agent instructions) and Python scripts (working code)
+- Domain fallback for Feishu API (auto-switches between open.feishu.cn ↔ open.larksuite.com)
+
+### Changed
+- Updated README with Extensions section
+- Reorganized repo structure: tools/ for standalone utilities, extensions/ for platform integrations
+
 ## [1.1.0] - 2026-04-09
 
 ### Added

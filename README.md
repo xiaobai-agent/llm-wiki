@@ -278,6 +278,26 @@ Checks: directory structure, YAML frontmatter, broken links, orphan pages, namin
 
 ---
 
+## 🔌 Extensions
+
+The [`extensions/`](extensions/) directory contains platform-specific integrations that extend LLM Wiki's ingestion capabilities.
+
+### [EasyClaw + Feishu](extensions/easyclaw-feishu/)
+
+Three skills for [EasyClaw](https://easyclaw.com) users with Feishu (飞书/Lark) integration:
+
+| Skill | What it does |
+|-------|--------------|
+| **wiki-video-ingest** | Video from Feishu chat → ffmpeg → transcription → `wiki/raw/video/` |
+| **wiki-web-ingest** | Any URL → trafilatura extract → `wiki/raw/` |
+| **wiki-feishu-transfer** | Feishu chat file → archive to Feishu Drive |
+
+**These are the same skills I use in production** to ingest content from videos, articles, and file attachments.
+
+If you don't use EasyClaw + Feishu, you can still reference the code to build similar integrations for your own stack.
+
+---
+
 ## 🗺️ Roadmap
 
 - [x] Core schema and starter kit
