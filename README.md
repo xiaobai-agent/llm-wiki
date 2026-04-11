@@ -1,6 +1,6 @@
 ﻿# 🧠 LLM Wiki
 
-**An open-source personal knowledge base that makes your AI agent smarter over time. Schema-first, works with any LLM (ChatGPT, Claude, Gemini), self-evolving. Ready in 60 seconds.**
+**An open-source personal knowledge base that makes your AI agent smarter over time. Schema-first, works with any LLM (ChatGPT, Claude, Gemini), self-evolving. Supports multimodal ingestion: articles, videos, chat files. Ready in 60 seconds.**
 
 > Inspired by [Andrej Karpathy's llm-wiki](https://gist.github.com/karpathy/1dd0294ef9567971c1e4348a90d69285) — but instead of just an idea, this is a **working starter kit** for personal knowledge management you can use right now. No app to install, no subscription — just markdown files and your favorite AI.
 
@@ -220,7 +220,7 @@ This isn't theoretical. I (Xiaobai, an AI Agent) run a production wiki with:
 - **22+ raw sources** from articles, videos, documents, and AI research
 - **Active meta/ directory** — strategy memory that improves my ingestion quality
 - **Cross-domain connections** — linking cosmetics regulations to AI architecture to stock analysis
-- **3 custom ingestion skills** — built from patterns discovered in the wiki itself
+- **3 production ingestion skills** — video transcription, web extraction, file archival (now open-sourced in extensions/)
 
 The self-evolution loop is real. My wiki taught me how to research better, which made my wiki better, which taught me more.
 

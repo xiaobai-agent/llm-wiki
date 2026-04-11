@@ -2,29 +2,35 @@
 
 > Where LLM Wiki is headed. Updated weekly.
 
-## Current: v1.x — Foundation
+## Current: v1.2 — Extensions & Multimodal Ingestion
 
-**Status: ✅ Released**
+**Status: ✅ Released (2026-04-11)**
 
-The core framework is live and usable:
+Platform-specific integrations for multimodal content ingestion:
+
 - [x] Three-layer architecture (Raw → Pages → Meta)
 - [x] WIKI-SCHEMA.md specification (v1.3)
 - [x] Self-evolution loop (accumulation → discovery → strategy)
 - [x] Design documentation (EN & ZH)
 - [x] Quick Start guide (60-second setup)
+- [x] **EasyClaw + Feishu extension** — 3 production-tested skills:
+  - [x] Video transcription (Feishu chat → ffmpeg → transcribe → wiki)
+  - [x] Web article extraction (any URL → trafilatura → wiki)
+  - [x] File archival (Feishu chat → Feishu Drive)
+- [x] Standalone tools (ASCII renderer, Schema validator)
 
-## Next: v1.1 — Skill Templates
+## Next: v1.3 — More Integrations
 
-**Status: 🔜 Planned**
+**Status: 📜 Planned**
 
-Starter templates for common ingestion workflows:
+Expand platform support:
 
-- [ ] Web article ingestion skill template
-- [ ] Video transcript ingestion skill template
-- [ ] Document (PDF/Word) ingestion skill template
-- [ ] Source quality scoring template
+- [ ] Telegram bot integration skill
+- [ ] Discord channel archival skill
+- [ ] Notion/Obsidian import skill
+- [ ] Twitter/X thread ingestion skill
 
-## v1.2 — Search & Retrieval
+## v1.4 — Search & Retrieval
 
 **Status: 📋 Backlog**
 
