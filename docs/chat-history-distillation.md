@@ -248,6 +248,56 @@ Auto-filter before distillation:
 | Export JSONL | Local temporary | Delete after processing |
 | Distilled results | Wiki + Git | Permanent with version control |
 
+## Why Is This Complex? (Not Just "A Script")
+
+A common question: "Can't you just write a quick script?"
+
+No — this is a **data pipeline**, not a single script. Here's why:
+
+### Challenge 1: Paginated Data Retrieval
+
+Most chat APIs return 50-100 messages per request. For 2GB of history, that's **tens of thousands** of API calls. You need:
+- Pagination handling
+- Checkpoint/resume on failure
+- Rate limiting to avoid bans
+
+### Challenge 2: Multi-modal Content
+
+Chat history isn't just text:
+- Images need downloading and storing
+- Files need separate handling
+- Voice messages need transcription
+- Videos need metadata extraction
+
+Each type has different storage and processing requirements.
+
+### Challenge 3: Three-Layer Distillation Logic
+
+Each layer requires:
+1. **Prompt design** — carefully tuned for extraction
+2. **Output parsing** — handle LLM format variations
+3. **Wiki integration** — write to correct location
+4. **Index updates** — keep wiki/index.md current
+
+That's 12 sub-tasks (4 × 3 layers), not 1.
+
+### Challenge 4: Deduplication and Incremental Updates
+
+After historical processing, the system must:
+- Track processed message IDs
+- Avoid duplicate facts
+- Support daily incremental runs
+- Handle edge cases (edited messages, deleted messages)
+
+### The Analogy
+
+| Type | What It Is | Complexity |
+|------|-----------|------------|
+| Previous scripts | "Cook one dish" | 3 steps, done |
+| This project | "Build a kitchen assembly line" | Multi-stage pipeline |
+
+---
+
 ## Implementation Timeline
 
 | Phase | Work | Duration |
