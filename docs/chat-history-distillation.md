@@ -125,8 +125,12 @@ You are a knowledge organizer. Below is one week's chat history.
 
 Please output:
 1. **Topics**: List 3-5 main topics discussed this week
-2. **Key Progress**: What decisions/conclusions were reached
+2. **Key Progress**: What decisions/conclusions were reached (from both user and AI)
 3. **To Follow Up**: Items mentioned but not completed
+
+Note: Pay attention to BOTH user and AI:
+- User's decisions, requirements, and preferences
+- AI's research findings, technical solutions, and verified conclusions
 
 Format: Markdown, concise, 1-2 sentences per topic.
 Keep specific names, dates, and project names.
@@ -138,22 +142,31 @@ Chat history:
 ### Atomic Facts Extraction Prompt
 
 ```
-You are a fact extractor. From the conversation below, extract what the USER expressed:
-- Explicit opinions
-- Decisions made
+You are a fact extractor. From the conversation below, extract atomic facts from BOTH user and AI:
+
+**From USER**:
+- Explicit decisions and opinions
 - Preferences stated
-- Important information mentioned
+- Important information (people, projects, numbers)
+
+**From AI**:
+- Verified technical discoveries (e.g., "API X doesn't support Y")
+- Validated solutions (e.g., "use PowerShell instead of curl for multipart uploads")
+- Architecture decisions that were confirmed
+- Lessons learned from debugging/failures
 
 Requirements:
-1. Only extract USER statements, ignore AI responses
-2. Each fact should be self-contained
-3. Preserve specific details (numbers, names, dates)
-4. Return empty list if nothing worth extracting
+1. Each fact should be self-contained, understandable without context
+2. For AI facts, only extract VERIFIED conclusions, not guesses or initial ideas
+3. Preserve specific details (numbers, names, dates, API names)
+4. Include "source" field: "user" or "ai"
+5. Return empty list if nothing worth extracting
 
 Output JSON:
 {
   "facts": [
-    {"fact": "...", "date": "2024-01-15", "topic": "..."},
+    {"fact": "...", "date": "2024-01-15", "topic": "...", "source": "user"},
+    {"fact": "...", "date": "2024-01-15", "topic": "...", "source": "ai"},
     ...
   ]
 }
@@ -165,15 +178,29 @@ Chat history:
 ### Backlog Ideas Prompt
 
 ```
-You are an idea collector. From the conversation below, find:
+You are an idea collector. From the conversation below, find ideas from BOTH user and AI:
+
+**From USER**:
 - Ideas discussed but NOT executed
 - Alternative approaches mentioned
 - Items marked as "later" or "someday"
 
+**From AI**:
+- Suggestions made but not adopted by user
+- Alternative approaches researched but not chosen
+- Potential directions mentioned but not pursued
+- Optimization ideas that weren't prioritized
+
+Requirements:
+1. Only collect ideas that were NOT executed
+2. For AI suggestions, distinguish "adopted" vs "deferred" — only record the latter
+3. Include "source" field: "user" or "ai"
+
 Output JSON:
 {
   "ideas": [
-    {"idea": "...", "context": "...", "date": "..."},
+    {"idea": "...", "context": "...", "date": "...", "source": "user"},
+    {"idea": "...", "context": "...", "date": "...", "source": "ai"},
     ...
   ]
 }
