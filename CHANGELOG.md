@@ -9,6 +9,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 _Next update planned for the week of 2026-04-14._
 
+## [1.3.0] - 2026-04-12
+
+### Added
+- **Chat History Distillation** documentation (`docs/chat-history-distillation.md` + Chinese version)
+  - Complete guide for converting GB-scale conversation histories into structured wiki knowledge
+  - Three-layer distillation model: Timeline Summaries → Atomic Facts → Backlog Ideas
+  - Two modes: Historical batch processing + Real-time distillation
+  - Prompt templates for extraction
+  - Industry research: AWS AgentCore shows 95% compression with 83% accuracy for summary memory
+- Added link to Chat History Distillation in README design docs section
+
+### Research
+- Surveyed Mem0, Zep, Letta, Cognee memory frameworks
+- Documented real-time distillation pattern: agent proactively identifies valuable content during conversation
+
 ## [1.2.0] - 2026-04-11
 
 ### Added
