@@ -40,6 +40,7 @@ Karpathy 管这叫"编译知识"。我们造了这台编译器。
 > - 🇺🇸 [**Design Document (English)**](docs/design-document.md) — 10+ 小时迭代浓缩的设计文档
 > - 🇨🇳 [**设计文档（中文版）**](docs/design-document-zh.md) — 完整中文版
 > - 🏗️ [**架构总图**](docs/architecture-diagram-zh.png) — 系统蓝图一览
+> - 🔄 [**聊天记录蒸馏**](docs/chat-history-distillation-zh.md) — 把 2GB 聊天记录变成结构化知识
 >
 > 设计文档涵盖完整架构、Schema 演进（v1.0→v1.3）、多模态素材处理管线、自我进化模块、容量规划，以及 10 条实战教训。
 >

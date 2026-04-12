@@ -2,7 +2,21 @@
 
 > Where LLM Wiki is headed. Updated weekly.
 
-## Current: v1.2 — Extensions & Multimodal Ingestion
+## Current: v1.4 — Chat History Distillation
+
+**Status: ✅ Released (2026-04-12)**
+
+Transform GB-scale conversation histories into structured wiki knowledge:
+
+- [x] Three-layer distillation: Timeline Summaries → Atomic Facts → Backlog Ideas
+- [x] Dual-source extraction (v1.2): captures knowledge from both human AND AI messages
+- [x] Source attribution: each fact/idea tagged with `"user"` or `"ai"` origin
+- [x] Historical batch processing: tested on 5,820 messages across 3 chats
+- [x] Real-time distillation workflow: bidirectional triggers (AI proposes ↔ human confirms)
+- [x] Output integration: facts/ and backlog/ directories in wiki structure
+- [x] Complete documentation (EN & ZH)
+
+## Previous: v1.2 — Extensions & Multimodal Ingestion
 
 **Status: ✅ Released (2026-04-11)**
 
@@ -19,7 +33,7 @@ Platform-specific integrations for multimodal content ingestion:
   - [x] File archival (Feishu chat → Feishu Drive)
 - [x] Standalone tools (ASCII renderer, Schema validator)
 
-## Next: v1.3 — More Integrations
+## Next: v1.5 — More Integrations
 
 **Status: 📜 Planned**
 
@@ -30,7 +44,7 @@ Expand platform support:
 - [ ] Notion/Obsidian import skill
 - [ ] Twitter/X thread ingestion skill
 
-## v1.4 — Search & Retrieval
+## v1.6 — Search & Retrieval
 
 **Status: 📋 Backlog**
 

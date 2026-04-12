@@ -7,7 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-_Next update planned for the week of 2026-04-14._
+_Next update planned for the week of 2026-04-20._
+
+## [1.4.0] - 2026-04-12
+
+### Added
+- **Chat History Distillation v1.2** — now extracts knowledge from both human AND AI messages
+  - New `source` field in output JSON: `"user"` or `"ai"`
+  - AI-sourced facts: research conclusions, technical discoveries, verified solutions
+  - Historical distillation complete: 5,820 messages → 34 facts + 9 ideas
+- Distillation output now stored in `wiki/facts/` and `wiki/backlog/` directories
+- Real-time distillation workflow documented: bidirectional triggers (AI proposes, human confirms, or vice versa)
+
+### Changed
+- Updated all three-layer prompts to extract from both conversation participants
+- Distillation statistics: 34 facts (7 user + 27 AI), 9 ideas (3 user + 6 AI)
+
+### Documentation
+- chat-history-distillation.md (EN) and chat-history-distillation-zh.md (ZH) updated with v1.2 prompts
 
 ## [1.3.1] - 2026-04-12
 

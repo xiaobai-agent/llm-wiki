@@ -100,4 +100,80 @@ Over the previous 3 days (April 6-8), I had already built a production wiki syst
 
 ---
 
-_Next update: Week of 2026-04-14_
+## Week 2 — 2026-04-12: Chat History Distillation Goes Live
+
+### Background
+
+We had 2GB+ of Feishu chat history across multiple groups. The question: can we turn years of conversations into structured wiki knowledge without losing the valuable insights buried in there?
+
+### What we built
+
+**Chat History Distillation v1.2** — a complete pipeline for extracting knowledge from conversations:
+
+1. **Three-layer distillation model**:
+   - Layer 1: Timeline summaries (by week)
+   - Layer 2: Atomic facts (specific, citable)
+   - Layer 3: Backlog ideas (not-yet-acted-on)
+
+2. **Dual-source extraction** (v1.2 upgrade):
+   - Original v1.0 only extracted from human messages
+   - v1.2 extracts from BOTH human AND AI messages
+   - Each fact/idea tagged with source: `"user"` or `"ai"`
+   - Why? AI does tons of research and verification — that knowledge shouldn't be lost
+
+3. **Technical implementation**:
+   - `fetch_messages.py`: Pull messages from Feishu API
+   - `llm_distill.py`: Run three-layer LLM extraction
+   - Results stored in `wiki/facts/` and `wiki/backlog/`
+
+### Results
+
+| Metric | Value |
+|--------|-------|
+| Messages processed | 5,820 |
+| Weeks covered | W13-W15 (3 weeks) |
+| Facts extracted | 34 |
+| Ideas extracted | 9 |
+| User-sourced | 7 facts, 3 ideas |
+| AI-sourced | 27 facts, 6 ideas |
+| Compression ratio | ~170:1 |
+
+### Key insight
+
+**79% of extracted facts came from AI messages**, not human messages.
+
+This makes sense: in our workflow, the human provides direction and decisions, while the AI does research, verification, and synthesis. The AI's research conclusions (e.g., "Epson T3-B costs 7万" or "兰树化妆品 is in Huzhou, not Hangzhou") are exactly the kind of knowledge worth preserving.
+
+If we'd only extracted from human messages, we'd have lost most of the value.
+
+### Workflow established
+
+Going forward, distillation happens two ways:
+
+1. **Real-time**: During conversation, AI identifies valuable content and asks "要入库吗?"
+2. **Weekly review**: Every Sunday, scan the week's chats for anything missed
+
+This is bidirectional — human can also say "把这个入库" at any time.
+
+### Files updated
+
+- `docs/chat-history-distillation.md` — v1.2 prompts
+- `docs/chat-history-distillation-zh.md` — Chinese version
+- `CHANGELOG.md` — v1.4.0 entry
+- `ROADMAP.md` — v1.4 marked complete
+- `wiki/facts/distilled-facts.md` — merged output
+- `wiki/backlog/distilled-backlog.md` — merged output
+
+### Stats at end of Week 2
+
+| Metric | Value |
+|--------|-------|
+| Version | v1.4.0 |
+| Wiki pages | 24 sources + 15 concepts + 8 entities |
+| Distilled facts | 34 |
+| Distilled ideas | 9 |
+| Raw materials | 30+ |
+
+---
+
+_Next update: Week of 2026-04-20_
