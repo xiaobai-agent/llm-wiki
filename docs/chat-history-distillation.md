@@ -316,11 +316,71 @@ After historical processing, the system must:
 2. **Vector Search**: When Wiki exceeds 500 pages, add embeddings
 3. **Cross-Agent Migration**: Markdown format is universal, any agent can read
 
+## Actual Implementation (2026-04-12)
+
+This section documents the real-world execution of the distillation pipeline.
+
+### Data Fetched
+
+| Chat | Messages | Date Range |
+|------|----------|------------|
+| Project A Test | 169 | 03-19 ~ 03-23 |
+| Main Chat | 5,049 | 03-26 ~ 04-12 |
+| Project B | 602 | 03-27 ~ 04-08 |
+| **Total** | **5,820** | 17 days |
+
+**Note**: Only ~6 MB total, not 2 GB. The API only returns messages after the bot joined the chat.
+
+### Technical Breakthrough: Cron + AgentTurn
+
+**Problem**: The EasyClaw `/chat/completions` REST API returned 400/405 errors. Investigation revealed the gateway is WebSocket-only ([GitHub Issue #27303](https://github.com/openclaw/openclaw/issues/27303)).
+
+**Solution**: Use the `cron` tool with `sessionTarget: isolated` and `payload.kind: agentTurn`. This spawns an independent LLM session that can:
+- Read local files
+- Process with full LLM capabilities
+- Write results back to disk
+- Auto-announce completion
+
+**No configuration changes required** — uses existing EasyClaw capabilities.
+
+### Execution Results
+
+| Week | Layer 2 Facts | Layer 3 Ideas | Runtime |
+|------|---------------|---------------|---------|
+| W11 | TBD | TBD | ~15s |
+| W12 | TBD | TBD | ~15s |
+| W13 | TBD | TBD | ~15s |
+| W14 | 5 | TBD | 16s |
+
+**Token consumption**: ~800-1000 per week × 4 weeks = ~4,000 tokens total
+
+### Lessons Learned
+
+1. **API limitations**: Not all "OpenAI-compatible" endpoints support REST. Always verify.
+2. **Cron is powerful**: The `agentTurn` mode effectively creates on-demand LLM workers.
+3. **Data size reality**: 3 weeks of chat ≠ years of history. Scope accordingly.
+4. **Test first**: Small test (1 week) before batch (4 weeks) catches issues early.
+
+### Scripts Created
+
+| Script | Purpose |
+|--------|---------|
+| `fetch_messages.py` | Paginated message retrieval with checkpoint/resume |
+| `distill_messages.py` | Keyword-based topic extraction (baseline) |
+| `write_to_wiki.py` | Output to wiki/timelines/ directory |
+
+### Future Work
+
+- [ ] Incremental daily processing via scheduled cron job
+- [ ] Cross-reference facts with existing Wiki pages
+- [ ] Merge distilled facts into MEMORY.md
+
 ## References
 
 - Mem0 Architecture Paper: https://arxiv.org/abs/2504.19413
 - AWS AgentCore Memory: https://aws.amazon.com/blogs/machine-learning/building-smarter-ai-agents-agentcore-long-term-memory-deep-dive/
 - Awesome-AI-Memory: https://github.com/IAAR-Shanghai/Awesome-AI-Memory
+- OpenClaw Gateway WebSocket Issue: https://github.com/openclaw/openclaw/issues/27303
 
 ---
 

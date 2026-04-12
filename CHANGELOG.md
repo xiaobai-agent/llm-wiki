@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 _Next update planned for the week of 2026-04-14._
 
+## [1.3.1] - 2026-04-12
+
+### Added
+- **Actual Implementation** section in chat-history-distillation.md documenting real-world execution
+- Technical breakthrough: Cron + AgentTurn pattern for LLM batch processing without REST API
+- Execution results: 5,820 messages fetched across 3 chats, ~4,000 tokens for full distillation
+- Scripts documentation: fetch_messages.py, distill_messages.py, write_to_wiki.py
+
+### Research
+- Discovered EasyClaw gateway is WebSocket-only (GitHub Issue #27303)
+- Validated `cron` tool with `sessionTarget: isolated` as workaround for batch LLM tasks
+
 ## [1.3.0] - 2026-04-12
 
 ### Added
