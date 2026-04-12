@@ -9,14 +9,24 @@
 
 ### 1. Content Sync (Bilingual)
 
+**README & Core Docs (every release):**
 - [ ] **README.md** (EN) — updated with new features/data/sections
 - [ ] **README_CN.md** (CN) — **fully synced** with English version
   - [ ] Same sections, same order
   - [ ] Same data/numbers (page counts, source counts, etc.)
   - [ ] Same badges and links
   - [ ] New sections translated
+
+**Design Docs (if architecture/schema changed):**
 - [ ] **docs/design-document.md** (EN) — updated if architecture changed
 - [ ] **docs/design-document-zh.md** (CN) — **fully synced** with English version
+
+**Feature Docs (if feature updated):**
+- [ ] Scan `docs/*.md` for features touched in this release
+- [ ] Update affected feature docs (add new sections, update examples)
+- [ ] Sync bilingual versions of feature docs:
+  - [ ] `docs/chat-history-distillation.md` ↔ `docs/chat-history-distillation-zh.md`
+  - [ ] (Add new pairs as features grow)
 
 ### 2. Version Tracking
 
@@ -72,10 +82,17 @@
 # Check what files changed since last tag
 git diff --name-only $(git describe --tags --abbrev=0) HEAD
 
+# List all docs and their line counts (bilingual pairs should be similar)
+wc -l docs/*.md
+
 # List all files that need bilingual sync
 echo "Check these pairs:"
 echo "  README.md ↔ README_CN.md"
 echo "  docs/design-document.md ↔ docs/design-document-zh.md"
+echo "  docs/chat-history-distillation.md ↔ docs/chat-history-distillation-zh.md"
+
+# Quick diff to find sections missing in Chinese version
+diff <(grep "^##" docs/design-document.md) <(grep "^##" docs/design-document-zh.md)
 ```
 
 ---
@@ -85,8 +102,21 @@ echo "  docs/design-document.md ↔ docs/design-document-zh.md"
 - [ ] Verify on GitHub: README renders correctly
 - [ ] Verify: Chinese README matches English
 - [ ] Verify: GitHub Release page shows correct version and notes
+- [ ] Verify: Feature docs are up to date with latest implementation
 - [ ] Update Profile README if needed
 - [ ] Record release in devlog.md
+
+---
+
+## Doc Update Triggers
+
+| When this happens... | Update these docs |
+|---------------------|-------------------|
+| New feature added | README (both), relevant feature doc (both) |
+| Architecture change | design-document (both), WIKI-SCHEMA if schema changed |
+| Bug fix / tweak | CHANGELOG only |
+| New tool added | tools/*/README, root README (both) |
+| Workflow change | Relevant feature doc (both), devlog |
 
 ---
 
