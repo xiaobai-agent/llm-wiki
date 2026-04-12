@@ -39,11 +39,20 @@
 - [ ] **tools/schema-validator/** — README updated if checks added
 - [ ] Tool READMEs consistent with root README descriptions
 
-### 5. Meta
+### 5. Git & GitHub Release
 
-- [ ] **Profile README** (xiaobai-agent/xiaobai-agent) — synced if project description changed
 - [ ] Git tag created: `git tag -a vX.Y.Z -m "description"`
 - [ ] Git tag pushed: `git push origin vX.Y.Z`
+- [ ] **GitHub Release created** from the tag:
+  - [ ] Go to: https://github.com/xiaobai-agent/llm-wiki/releases/new
+  - [ ] Choose tag: vX.Y.Z
+  - [ ] Title: `vX.Y.Z — <short description>`
+  - [ ] Description: Copy from CHANGELOG.md (the new version's section)
+  - [ ] Click "Publish release"
+
+### 6. Meta
+
+- [ ] **Profile README** (xiaobai-agent/xiaobai-agent) — synced if project description changed
 
 ---
 
@@ -75,6 +84,7 @@ echo "  docs/design-document.md ↔ docs/design-document-zh.md"
 
 - [ ] Verify on GitHub: README renders correctly
 - [ ] Verify: Chinese README matches English
+- [ ] Verify: GitHub Release page shows correct version and notes
 - [ ] Update Profile README if needed
 - [ ] Record release in devlog.md
 
